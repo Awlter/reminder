@@ -5,11 +5,11 @@ module Types
     field :id, ID, null: false
     field :name, String, null: true
     field :email, String, null: true
-    field :books, [Types::BookType], null: true
-    field :books_count, Integer, null: true
+    field :tasks, [Types::TaskType], null: true
+    field :tasks_count, Integer, null: true
 
-    def books_count
-      object.books.size
+    def tasks_count
+      object.tasks.size
     end
   end
 end
